@@ -1,7 +1,7 @@
 var $ = function (id) {
     return document.getElementById(id); 
 }
-
+//This function sets $ equal to the command 'document.getElementById(id)' so that you don't have to type it every time
 
 
 var calculate_click = function(subtotal, taxRate){
@@ -19,11 +19,9 @@ var calculate_click = function(subtotal, taxRate){
 	
 	else {
 		var salesTax=(tr * sub)/100;
-//		window.alert(salesTax);
 		
 		var total=(sub + salesTax);
-//		window.alert(total);
-		
+	
 		$("salesTax").value= salesTax;
 		$("total").value= total.toFixed(2);
 	}
@@ -34,3 +32,5 @@ window.onload = function () {
 	 $("calculate").onclick = calculate_click;
 	 $("subtotal").focus; 
 	 }
+
+//This function tells the page to focus on the subtotal field
